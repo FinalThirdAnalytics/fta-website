@@ -266,7 +266,8 @@ nav{
 .planos-grid{
   display:grid;grid-template-columns:1fr 1fr;gap:1px;
   background:var(--rule);border:1px solid var(--rule);
-  border-radius:2px;overflow:hidden;max-width:860px;
+  border-radius:2px;overflow:hidden;max-width:960px;
+  margin:0 auto;
 }
 .plano{background:var(--navy);padding:40px 36px;display:flex;flex-direction:column;}
 .plano-featured{background:var(--navy3);position:relative;}
@@ -301,25 +302,43 @@ nav{
 .plano-features li.extra::before{content:'+';color:var(--lime);}
 
 /* ── MARKETS COMPACT ── */
-.markets-strip{
-  border:1px solid var(--rule);border-radius:2px;padding:28px 32px;
-  background:var(--navy3);
-  display:grid;grid-template-columns:1fr 1fr;column-gap:48px;row-gap:20px;
+/* ── MARKETS ── */
+.markets-block{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:start;}
+.markets-region{display:flex;flex-direction:column;gap:14px;}
+.markets-region-label{
+  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--ink-faint);
+  display:flex;align-items:center;gap:12px;
+  padding-bottom:12px;border-bottom:1px solid var(--rule);
 }
-.markets-col-title{
-  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.16em;
-  text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;
-  padding-bottom:10px;border-bottom:1px solid var(--rule);
+.markets-region-label .count{
+  margin-left:auto;color:var(--accent2);
+  font-size:0.58rem;letter-spacing:0.18em;
 }
-.markets-list{
-  font-size:0.88rem;color:var(--ink);line-height:1.6;
+.markets-chips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.markets-chips.cols-2{grid-template-columns:repeat(2,1fr);}
+.market-chip{
+  padding:14px 16px;border:1px solid var(--rule);border-radius:2px;
+  background:var(--navy3);font-size:0.84rem;color:var(--ink);
+  text-align:center;font-family:var(--sans);font-weight:400;
+  transition:border-color .2s,background .2s,transform .2s;
+  cursor:default;position:relative;
 }
-.markets-list .sep{color:var(--accent2);margin:0 6px;}
-.markets-foot{
-  margin-top:4px;padding-top:18px;border-top:1px solid var(--rule);
-  font-size:0.78rem;color:var(--ink-mid);line-height:1.65;font-weight:300;
+.market-chip::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:var(--accent2);opacity:0;transition:opacity .2s;
 }
-.markets-foot strong{color:var(--ink);font-weight:500;}
+.market-chip:hover{
+  border-color:rgba(29,78,216,0.35);background:var(--navy4);
+}
+.market-chip:hover::before{opacity:1;}
+.markets-note{
+  margin-top:28px;padding:20px 24px;
+  border-left:2px solid var(--accent2);background:var(--navy3);
+  font-size:0.82rem;color:var(--ink-mid);line-height:1.7;font-weight:300;
+  border-radius:0 2px 2px 0;
+}
+.markets-note strong{color:var(--ink);font-weight:500;}
 
 /* ── SOBRE ── */
 .sobre-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
@@ -599,7 +618,9 @@ footer{
   .pt-socios,.pt-formats,.ac-categories{grid-template-columns:1fr;}
   .pt-socio,.pt-format,.ac-category{border-right:none;border-bottom:1px solid var(--rule);}
   .pt-socio:last-child,.pt-format:last-child,.ac-category:last-child{border-bottom:none;}
-  .sobre-layout,.contact-layout,.footer-top,.markets-strip,.ac-audience,.ac-signup{grid-template-columns:1fr;gap:32px;}
+  .sobre-layout,.contact-layout,.footer-top,.markets-block,.ac-audience,.ac-signup{grid-template-columns:1fr;gap:32px;}
+  .markets-chips{grid-template-columns:repeat(2,1fr);}
+  .markets-chips.cols-2{grid-template-columns:repeat(2,1fr);}
   .planos-grid{grid-template-columns:1fr;max-width:100%;}
   .section-header-wide{grid-template-columns:1fr;}
   .form-row{grid-template-columns:1fr;}
@@ -796,18 +817,37 @@ footer{
         <h2 class="section-title">Custo acessível.<br><em>Perfil compatível.</em></h2>
         <p class="section-sub">Mercados escolhidos pelo rácio entre custo de aquisição, qualidade de jogo e historial de adaptação ao futebol português.</p>
       </div>
-      <div class="markets-strip">
-        <div>
-          <div class="markets-col-title">🌍 Europa</div>
-          <div class="markets-list">Portugal <span class="sep">·</span> França <span class="sep">·</span> Espanha <span class="sep">·</span> Bélgica <span class="sep">·</span> Holanda <span class="sep">·</span> Alemanha</div>
+      <div class="markets-block">
+        <div class="markets-region">
+          <div class="markets-region-label">
+            <span>Europa</span>
+            <span class="count">06 ligas</span>
+          </div>
+          <div class="markets-chips">
+            <div class="market-chip">Portugal</div>
+            <div class="market-chip">França</div>
+            <div class="market-chip">Espanha</div>
+            <div class="market-chip">Bélgica</div>
+            <div class="market-chip">Holanda</div>
+            <div class="market-chip">Alemanha</div>
+          </div>
         </div>
-        <div>
-          <div class="markets-col-title">🌎 América do Sul</div>
-          <div class="markets-list">Brasil <span class="sep">·</span> Argentina <span class="sep">·</span> Uruguai <span class="sep">·</span> Colômbia <span class="sep">·</span> Chile</div>
+        <div class="markets-region">
+          <div class="markets-region-label">
+            <span>América do Sul</span>
+            <span class="count">05 ligas</span>
+          </div>
+          <div class="markets-chips cols-2">
+            <div class="market-chip">Brasil</div>
+            <div class="market-chip">Argentina</div>
+            <div class="market-chip">Uruguai</div>
+            <div class="market-chip">Colômbia</div>
+            <div class="market-chip" style="grid-column:span 2;">Chile</div>
+          </div>
         </div>
-        <div style="grid-column:1/-1;" class="markets-foot">
-          <strong>Coeficientes de liga integrados no FTA Score.</strong> Garantem que um CB da Série A brasileira e um CB da LP2 são comparados de forma justa — os scores são normalizados para a realidade de cada liga.
-        </div>
+      </div>
+      <div class="markets-note">
+        <strong>Coeficientes de liga integrados no FTA Score.</strong> Garantem que um CB da Série A brasileira e um CB da LP2 são comparados de forma justa — os scores são normalizados para a realidade de cada liga.
       </div>
     </div>
   </section>
