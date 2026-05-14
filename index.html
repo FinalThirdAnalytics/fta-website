@@ -50,11 +50,12 @@ nav{
   border-bottom:1px solid var(--rule);
   gap:32px;
 }
-.nav-logo{display:inline-flex;flex-direction:column;text-decoration:none;gap:0;flex-shrink:0;}
+.nav-logo{display:inline-flex;flex-direction:column;align-items:center;text-decoration:none;gap:0;flex-shrink:0;}
 .ft-top{display:inline-flex;align-items:baseline;gap:12px;line-height:1;}
 .ft-final{font-family:var(--serif);font-size:1.05rem;font-weight:400;letter-spacing:0.22em;color:rgba(255,255,255,0.42);white-space:nowrap;}
 .ft-third{font-family:var(--serif);font-size:1.05rem;font-weight:700;letter-spacing:0.22em;color:rgba(255,255,255,0.95);white-space:nowrap;}
 .ft-rule{display:block;margin-top:6px;}
+.ft-analytics{display:block;margin-top:5px;font-family:var(--sans);font-size:0.5rem;letter-spacing:0.42em;color:rgba(255,255,255,0.55);text-transform:uppercase;text-align:center;}
 
 /* ── BRAND TABS ── */
 .brand-tabs{
@@ -539,7 +540,7 @@ footer{
   margin-bottom:28px;
 }
 .footer-brand{display:flex;flex-direction:column;gap:14px;}
-.footer-brand-mark{display:inline-flex;flex-direction:column;gap:0;margin-bottom:10px;}
+.footer-brand-mark{display:inline-flex;flex-direction:column;align-items:center;gap:0;margin-bottom:10px;}
 .footer-desc{font-size:0.76rem;color:var(--ink-faint);line-height:1.7;font-weight:300;}
 .footer-col-title{
   font-family:var(--mono);font-size:0.58rem;letter-spacing:0.18em;
@@ -621,6 +622,7 @@ footer{
       <rect x="72"  y="1" width="66" height="2" fill="rgba(255,255,255,0.18)" rx="1"/>
       <rect x="144" y="1" width="66" height="2" fill="#1d4ed8" rx="1"/>
     </svg>
+    <span class="ft-analytics">Analytics</span>
   </a>
 
   <div class="brand-tabs" role="tablist">
@@ -812,46 +814,25 @@ footer{
 
   <!-- SOBRE -->
   <section class="section section-alt" id="sobre">
-    <div style="max-width:1200px;margin:0 auto;">
-      <div class="sobre-layout">
-        <div>
-          <div class="section-label">Sobre</div>
-          <h2 class="section-title">Construído por scouts,<br><em>para clubes.</em></h2>
-          <div class="sobre-text" style="margin-top:24px;">
-            <p>A <strong>Final Third Analytics</strong> nasceu em 2025, no Porto. Damos aos clubes profissionais o processo de recrutamento que merecem — rigoroso, independente e informado por dados reais.</p>
-            <p>Não somos uma agência. Não representamos jogadores. Não recebemos comissões. Somos um parceiro externo que trabalha <strong>exclusivamente para o clube</strong> — com o rigor de um departamento de scouting interno, sem o custo de uma estrutura fixa.</p>
-          </div>
-          <div class="sobre-values">
-            <div class="sobre-value">
-              <div class="sobre-value-bullet"></div>
-              <div class="sobre-value-text"><strong>Sem agentes, sem comissões.</strong> Interesse é o do clube, não o de terceiros.</div>
-            </div>
-            <div class="sobre-value">
-              <div class="sobre-value-bullet"></div>
-              <div class="sobre-value-text"><strong>Exclusividade por liga.</strong> No Premium, não trabalhamos com outro clube da mesma liga.</div>
-            </div>
-            <div class="sobre-value">
-              <div class="sobre-value-bullet"></div>
-              <div class="sobre-value-text"><strong>Dados + olho clínico.</strong> Nenhum número substitui a observação presencial. Os dois juntos fazem a diferença.</div>
-            </div>
-          </div>
+    <div style="max-width:860px;margin:0 auto;">
+      <div class="section-label">Sobre</div>
+      <h2 class="section-title">Construído por scouts,<br><em>para clubes.</em></h2>
+      <div class="sobre-text" style="margin-top:24px;">
+        <p>A <strong>Final Third Analytics</strong> nasceu em 2025, no Porto. Damos aos clubes profissionais o processo de recrutamento que merecem — rigoroso, independente e informado por dados reais.</p>
+        <p>Não somos uma agência. Não representamos jogadores. Não recebemos comissões. Somos um parceiro externo que trabalha <strong>exclusivamente para o clube</strong> — com o rigor de um departamento de scouting interno, sem o custo de uma estrutura fixa.</p>
+      </div>
+      <div class="sobre-values">
+        <div class="sobre-value">
+          <div class="sobre-value-bullet"></div>
+          <div class="sobre-value-text"><strong>Sem agentes, sem comissões.</strong> Interesse é o do clube, não o de terceiros.</div>
         </div>
-        <div class="fundadores">
-          <div class="fundador">
-            <div class="fundador-name">David Costa</div>
-            <div class="fundador-role">Co-fundador · Análise de dados &amp; Plataforma</div>
-            <p class="fundador-bio">Responsável pelo desenvolvimento da plataforma FTA, metodologia de scoring e integração de dados Wyscout. Background técnico com conhecimento do mercado europeu e sul-americano.</p>
-          </div>
-          <div class="fundador">
-            <div class="fundador-name">João Sousa</div>
-            <div class="fundador-role">Co-fundador · Scouting &amp; Operações</div>
-            <p class="fundador-bio">Responsável pelo scouting presencial, rede de contactos e operações com clubes clientes. Observação direta e análise tática com foco em mercados ibéricos e sul-americanos.</p>
-          </div>
-          <div class="fundador">
-            <div class="fundador-name">Pedro Correia</div>
-            <div class="fundador-role">Co-fundador · Direção &amp; Estratégia</div>
-            <p class="fundador-bio">Responsável pela direção operacional e estratégica. Background em gestão desportiva e relação institucional com clubes e profissionais do futebol português.</p>
-          </div>
+        <div class="sobre-value">
+          <div class="sobre-value-bullet"></div>
+          <div class="sobre-value-text"><strong>Exclusividade por liga.</strong> No Premium, não trabalhamos com outro clube da mesma liga.</div>
+        </div>
+        <div class="sobre-value">
+          <div class="sobre-value-bullet"></div>
+          <div class="sobre-value-text"><strong>Dados + olho clínico.</strong> Nenhum número substitui a observação presencial. Os dois juntos fazem a diferença.</div>
         </div>
       </div>
     </div>
@@ -935,25 +916,6 @@ footer{
           <div class="pt-format-tag">04 · Mensal · 20–30 min</div>
           <h3 class="pt-format-title">Depois do Apito</h3>
           <p class="pt-format-desc">Ex-jogadores em ambiente descontraído. Histórias de balneário, momentos marcantes da carreira, a transição para a vida fora do campo. Storytelling puro.</p>
-        </div>
-      </div>
-
-      <div class="section-label pt-label" style="margin-bottom:24px;">Co-fundadores</div>
-      <div class="pt-socios">
-        <div class="pt-socio">
-          <div class="pt-socio-mark">01</div>
-          <div class="pt-socio-name">David Costa</div>
-          <div class="pt-socio-role">Co-fundador</div>
-        </div>
-        <div class="pt-socio">
-          <div class="pt-socio-mark">02</div>
-          <div class="pt-socio-name">João Sousa</div>
-          <div class="pt-socio-role">Co-fundador</div>
-        </div>
-        <div class="pt-socio">
-          <div class="pt-socio-mark">03</div>
-          <div class="pt-socio-name">Pedro Correia</div>
-          <div class="pt-socio-role">Co-fundador</div>
         </div>
       </div>
 
@@ -1121,21 +1083,7 @@ footer{
             <div class="contact-item-icon">✉</div>
             <div>
               <div class="contact-item-label">David Costa</div>
-              <div class="contact-item-val"><a href="/cdn-cgi/l/email-protection#ddb9bcabb4b99dbbb4b3bcb1a9b5b4afb9bcb3bcb1a4a9b4beaef3ada9">david&#64;finalthirdanalytics.pt</a></div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">✉</div>
-            <div>
-              <div class="contact-item-label">João Sousa</div>
-              <div class="contact-item-val"><a href="/cdn-cgi/l/email-protection#3b51545a547b5d52555a574f5352495f5a555a57424f525848154b4f">joao&#64;finalthirdanalytics.pt</a></div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">✉</div>
-            <div>
-              <div class="contact-item-label">Pedro Correia</div>
-              <div class="contact-item-val"><a href="mailto:pedro@finalthirdanalytics.pt">pedro&#64;finalthirdanalytics.pt</a></div>
+              <div class="contact-item-val"><a href="mailto:david@finalthirdanalytics.pt">david&#64;finalthirdanalytics.pt</a></div>
             </div>
           </div>
           <div class="contact-item">
@@ -1201,6 +1149,7 @@ footer{
             <rect x="72"  y="1" width="66" height="2" fill="rgba(255,255,255,0.18)" rx="1"/>
             <rect x="144" y="1" width="66" height="2" fill="#1d4ed8" rx="1"/>
           </svg>
+          <span class="ft-analytics">Analytics</span>
         </div>
         <p class="footer-desc">Análise de dados, conteúdo editorial e formação para o futebol profissional.<br>Porto, Portugal · 2025.</p>
       </div>
