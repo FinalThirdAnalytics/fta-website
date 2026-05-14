@@ -268,7 +268,7 @@ nav{
   background:var(--rule);border:1px solid var(--rule);
   border-radius:2px;overflow:hidden;max-width:860px;
 }
-.plano{background:var(--navy);padding:40px 36px;}
+.plano{background:var(--navy);padding:40px 36px;display:flex;flex-direction:column;}
 .plano-featured{background:var(--navy3);position:relative;}
 .plano-featured::before{
   content:'RECOMENDADO';position:absolute;top:0;left:0;right:0;
@@ -291,7 +291,7 @@ nav{
   margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--rule);
   font-weight:300;
 }
-.plano-features{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:28px;}
+.plano-features{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:28px;flex-grow:1;}
 .plano-features li{
   font-size:0.8rem;color:var(--ink-mid);display:flex;align-items:flex-start;gap:10px;line-height:1.4;
 }
@@ -302,22 +302,22 @@ nav{
 
 /* ── MARKETS COMPACT ── */
 .markets-strip{
-  border:1px solid var(--rule);border-radius:2px;padding:32px 36px;
+  border:1px solid var(--rule);border-radius:2px;padding:28px 32px;
   background:var(--navy3);
-  display:grid;grid-template-columns:1fr 1fr;gap:48px;
+  display:grid;grid-template-columns:1fr 1fr;column-gap:48px;row-gap:20px;
 }
 .markets-col-title{
   font-family:var(--mono);font-size:0.6rem;letter-spacing:0.16em;
-  text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;
+  text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;
   padding-bottom:10px;border-bottom:1px solid var(--rule);
 }
 .markets-list{
-  font-size:0.88rem;color:var(--ink);line-height:1.7;
+  font-size:0.88rem;color:var(--ink);line-height:1.6;
 }
 .markets-list .sep{color:var(--accent2);margin:0 6px;}
 .markets-foot{
-  margin-top:24px;padding-top:20px;border-top:1px solid var(--rule);
-  font-size:0.78rem;color:var(--ink-mid);line-height:1.7;font-weight:300;
+  margin-top:4px;padding-top:18px;border-top:1px solid var(--rule);
+  font-size:0.78rem;color:var(--ink-mid);line-height:1.65;font-weight:300;
 }
 .markets-foot strong{color:var(--ink);font-weight:500;}
 
