@@ -4,8 +4,21 @@
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Final Third · Analytics · Primeiro Toque · Academy</title>
+<title>Final Third · Analytics · Primeiro Toque · Institute</title>
 <meta name="description" content="Final Third — análise de dados, conteúdo editorial e formação para o futebol profissional. Porto, Portugal.">
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#08111f">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Final Third Analytics">
+<meta property="og:title" content="Final Third · Analytics · Primeiro Toque · Institute">
+<meta property="og:description" content="Análise de dados, conteúdo editorial e formação para o futebol profissional. Porto, Portugal.">
+<meta property="og:url" content="https://finalthirdanalytics.pt/">
+<meta property="og:image" content="https://finalthirdanalytics.pt/apple-touch-icon.png">
+<meta name="twitter:card" content="summary">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -88,9 +101,9 @@ nav{
 .brand-tab[data-tab="pt"].active{color:var(--ink);}
 .brand-tab[data-tab="pt"].active::after{background:var(--pt-gold);}
 .brand-tab[data-tab="pt"].active .tab-mark{color:var(--pt-gold);}
-.brand-tab[data-tab="academy"].active{color:var(--ink);}
-.brand-tab[data-tab="academy"].active::after{background:var(--lime);}
-.brand-tab[data-tab="academy"].active .tab-mark{color:var(--lime);}
+.brand-tab[data-tab="institute"].active{color:var(--ink);}
+.brand-tab[data-tab="institute"].active::after{background:var(--lime);}
+.brand-tab[data-tab="institute"].active .tab-mark{color:var(--lime);}
 
 .nav-cta{
   font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;
@@ -121,7 +134,7 @@ nav{
   background:radial-gradient(ellipse 80% 60% at 60% 40%, rgba(201,176,107,0.10) 0%, transparent 70%),
              radial-gradient(ellipse 40% 40% at 80% 70%, rgba(168,144,80,0.06) 0%, transparent 60%);
 }
-.hero-bg-academy{
+.hero-bg-institute{
   background:radial-gradient(ellipse 80% 60% at 60% 40%, rgba(200,240,74,0.07) 0%, transparent 70%),
              radial-gradient(ellipse 40% 40% at 80% 70%, rgba(168,144,80,0.06) 0%, transparent 60%);
 }
@@ -137,8 +150,8 @@ nav{
 .hero-label::before{content:'';width:24px;height:1px;background:var(--accent2);}
 .hero-label.pt-label{color:var(--pt-gold);}
 .hero-label.pt-label::before{background:var(--pt-gold);}
-.hero-label.academy-label{color:var(--lime);}
-.hero-label.academy-label::before{background:var(--lime);}
+.hero-label.institute-label{color:var(--lime);}
+.hero-label.institute-label::before{background:var(--lime);}
 .hero-title{
   font-family:var(--serif);font-size:clamp(2.6rem,5.5vw,4.2rem);
   font-weight:600;line-height:1.12;color:white;
@@ -146,7 +159,7 @@ nav{
 }
 .hero-title em{font-style:italic;color:var(--accent2);}
 .hero-title em.pt-em{color:var(--pt-gold);}
-.hero-title em.academy-em{color:var(--lime);}
+.hero-title em.institute-em{color:var(--lime);}
 .hero-desc{
   font-size:1rem;color:var(--ink-mid);max-width:580px;
   line-height:1.75;margin-bottom:48px;font-weight:300;
@@ -162,8 +175,8 @@ nav{
 .btn-primary:hover{background:#1e40af;transform:translateY(-1px);}
 .btn-primary.pt{background:var(--pt-gold);color:var(--navy);}
 .btn-primary.pt:hover{background:#A89050;}
-.btn-primary.academy{background:var(--lime);color:var(--navy);}
-.btn-primary.academy:hover{background:#B0D944;}
+.btn-primary.institute{background:var(--lime);color:var(--navy);}
+.btn-primary.institute:hover{background:#B0D944;}
 .btn-ghost{
   display:inline-flex;align-items:center;gap:8px;
   padding:14px 28px;border:1px solid var(--rule);color:var(--ink-mid);
@@ -182,7 +195,7 @@ nav{
 }
 .hero-stat-val span{font-size:1.2rem;color:var(--accent2);}
 .hero-stat-val span.pt-em{color:var(--pt-gold);}
-.hero-stat-val span.academy-em{color:var(--lime);}
+.hero-stat-val span.institute-em{color:var(--lime);}
 .hero-stat-label{
   font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;
   color:var(--ink-faint);margin-top:4px;
@@ -205,7 +218,7 @@ nav{
   color:var(--accent2);margin-bottom:20px;
 }
 .pilar-num.pt-em{color:var(--pt-gold);}
-.pilar-num.academy-em{color:var(--lime);}
+.pilar-num.institute-em{color:var(--lime);}
 .pilar-title{
   font-family:var(--serif);font-size:1.35rem;font-weight:600;
   color:white;margin-bottom:12px;line-height:1.2;
@@ -223,15 +236,15 @@ nav{
 .section-label::before{content:'';width:20px;height:1px;background:var(--accent2);}
 .section-label.pt-label{color:var(--pt-gold);}
 .section-label.pt-label::before{background:var(--pt-gold);}
-.section-label.academy-label{color:var(--lime);}
-.section-label.academy-label::before{background:var(--lime);}
+.section-label.institute-label{color:var(--lime);}
+.section-label.institute-label::before{background:var(--lime);}
 .section-title{
   font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);
   font-weight:600;color:white;margin-bottom:16px;line-height:1.15;
 }
 .section-title em{font-style:italic;color:var(--accent2);}
 .section-title em.pt-em{color:var(--pt-gold);}
-.section-title em.academy-em{color:var(--lime);}
+.section-title em.institute-em{color:var(--lime);}
 .section-sub{font-size:0.9rem;color:var(--ink-mid);line-height:1.75;font-weight:300;max-width:580px;}
 .section-header{margin-bottom:60px;}
 .section-header-wide{margin-bottom:60px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;}
@@ -407,92 +420,118 @@ nav{
 .pt-footnote{margin-top:32px;font-family:var(--mono);font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-faint);display:flex;align-items:center;gap:12px;}
 .pt-footnote::before{content:'';width:20px;height:1px;background:var(--pt-gold);}
 
-/* ── ACADEMY ── */
-.ac-body{max-width:780px;margin-bottom:50px;}
-.ac-body p{font-size:0.92rem;color:var(--ink-mid);line-height:1.85;font-weight:300;margin-bottom:18px;}
-.ac-body p:last-child{margin-bottom:0;}
-.ac-body strong{color:var(--ink);font-weight:500;}
-.ac-banner{
+/* ── BRAND PLATE (hero identity block, PT + FTI) ── */
+.brand-plate{
+  display:flex;align-items:center;gap:24px;
+  margin-bottom:32px;
+}
+.brand-plate-art{
+  width:104px;height:104px;flex-shrink:0;
+  border:1px solid var(--rule);border-radius:3px;
+  background:var(--navy3);overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.brand-plate-art img{width:100%;height:100%;object-fit:cover;display:block;}
+.brand-plate-art.icon-tile img{width:82%;height:82%;object-fit:contain;}
+.brand-plate-art.pt-art{border-color:rgba(201,176,107,0.28);}
+.brand-plate-art.fti-art{border-color:rgba(200,240,74,0.24);}
+
+/* FTI wordmark lockup — dark-background rebuild of the primary logo */
+.fti-lockup{display:inline-flex;flex-direction:column;align-items:center;gap:0;}
+.fti-lockup .ft-final{font-size:1.5rem;letter-spacing:0.24em;}
+.fti-lockup .ft-third{font-size:1.5rem;letter-spacing:0.24em;}
+.fti-lockup .ft-word{
+  display:block;margin-top:7px;
+  font-family:var(--sans);font-size:0.6rem;letter-spacing:0.46em;
+  color:rgba(255,255,255,0.5);text-transform:uppercase;text-align:center;
+}
+
+/* ── INSTITUTE ── */
+.fti-body{max-width:780px;margin-bottom:50px;}
+.fti-body p{font-size:0.92rem;color:var(--ink-mid);line-height:1.85;font-weight:300;margin-bottom:18px;}
+.fti-body p:last-child{margin-bottom:0;}
+.fti-body strong{color:var(--ink);font-weight:500;}
+.fti-banner{
   display:flex;align-items:center;gap:14px;
   padding:14px 20px;border:1px solid rgba(200,240,74,0.25);
   background:var(--lime-glow);border-radius:2px;
   margin-bottom:48px;max-width:780px;
 }
-.ac-banner-dot{
+.fti-banner-dot{
   width:8px;height:8px;border-radius:50%;background:var(--lime);
   flex-shrink:0;
   box-shadow:0 0 0 4px rgba(200,240,74,0.18);
   animation:pulse 2s ease-in-out infinite;
 }
 @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(200,240,74,0.18);}50%{box-shadow:0 0 0 8px rgba(200,240,74,0.06);}}
-.ac-banner-text{font-family:var(--mono);font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--lime);}
+.fti-banner-text{font-family:var(--mono);font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--lime);}
 
-.ac-categories{
+.fti-categories{
   display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
   background:var(--rule);border:1px solid var(--rule);
   margin-bottom:48px;
 }
-.ac-category{padding:32px 28px;background:var(--navy);transition:background .2s;}
-.ac-category:hover{background:var(--navy2);}
-.ac-cat-num{
+.fti-category{padding:32px 28px;background:var(--navy);transition:background .2s;}
+.fti-category:hover{background:var(--navy2);}
+.fti-cat-num{
   font-family:var(--mono);font-size:0.58rem;letter-spacing:0.2em;
   color:var(--lime);margin-bottom:18px;
 }
-.ac-cat-title{
+.fti-cat-title{
   font-family:var(--serif);font-size:1.25rem;font-weight:600;
   color:var(--ink);margin-bottom:10px;line-height:1.2;
 }
-.ac-cat-desc{font-size:0.8rem;color:var(--ink-mid);line-height:1.7;font-weight:300;margin-bottom:14px;}
-.ac-cat-meta{
+.fti-cat-desc{font-size:0.8rem;color:var(--ink-mid);line-height:1.7;font-weight:300;margin-bottom:14px;}
+.fti-cat-meta{
   font-family:var(--mono);font-size:0.58rem;letter-spacing:0.14em;
   color:var(--ink-faint);text-transform:uppercase;
 }
 
-.ac-audience{
+.fti-audience{
   display:grid;grid-template-columns:1fr 1fr;gap:48px;
   padding:36px;border:1px solid var(--rule);border-radius:2px;
   background:var(--navy3);margin-bottom:36px;
 }
-.ac-audience-col-title{
+.fti-audience-col-title{
   font-family:var(--mono);font-size:0.6rem;letter-spacing:0.16em;
   text-transform:uppercase;color:var(--ink-faint);margin-bottom:18px;
   padding-bottom:12px;border-bottom:1px solid var(--rule);
 }
-.ac-audience-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.ac-audience-list li{
+.fti-audience-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fti-audience-list li{
   font-size:0.85rem;color:var(--ink);display:flex;align-items:flex-start;gap:10px;line-height:1.5;
 }
-.ac-audience-list li::before{
+.fti-audience-list li::before{
   content:'→';color:var(--lime);font-size:0.78rem;flex-shrink:0;margin-top:1px;
 }
 
-.ac-signup{
+.fti-signup{
   padding:36px;border:1px solid var(--rule);border-radius:2px;
   background:var(--navy3);
   display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;
 }
-.ac-signup-text h3{
+.fti-signup-text h3{
   font-family:var(--serif);font-size:1.4rem;font-weight:600;
   color:var(--ink);margin-bottom:10px;line-height:1.25;
 }
-.ac-signup-text h3 em{font-style:italic;color:var(--lime);}
-.ac-signup-text p{font-size:0.82rem;color:var(--ink-mid);line-height:1.65;font-weight:300;}
-.ac-signup-form{display:flex;gap:0;border:1px solid var(--rule);border-radius:2px;overflow:hidden;}
-.ac-signup-form input{
+.fti-signup-text h3 em{font-style:italic;color:var(--lime);}
+.fti-signup-text p{font-size:0.82rem;color:var(--ink-mid);line-height:1.65;font-weight:300;}
+.fti-signup-form{display:flex;gap:0;border:1px solid var(--rule);border-radius:2px;overflow:hidden;}
+.fti-signup-form input{
   flex:1;background:var(--navy);border:none;
   padding:13px 16px;color:var(--ink);font-family:var(--sans);font-size:0.85rem;
   outline:none;
 }
-.ac-signup-form input::placeholder{color:var(--ink-faint);}
-.ac-signup-form button{
+.fti-signup-form input::placeholder{color:var(--ink-faint);}
+.fti-signup-form button{
   background:var(--lime);color:var(--navy);
   border:none;padding:13px 22px;cursor:pointer;
   font-family:var(--mono);font-size:0.62rem;letter-spacing:0.14em;
   text-transform:uppercase;font-weight:500;
   transition:background .2s;
 }
-.ac-signup-form button:hover{background:#B0D944;}
-.ac-signup-note{
+.fti-signup-form button:hover{background:#B0D944;}
+.fti-signup-note{
   margin-top:12px;font-size:0.7rem;color:var(--ink-faint);font-weight:300;
 }
 
@@ -571,7 +610,7 @@ footer{
 }
 .footer-col-title.fta-col::before{background:var(--accent2);}
 .footer-col-title.pt-col::before{background:var(--pt-gold);}
-.footer-col-title.ac-col::before{background:var(--lime);}
+.footer-col-title.fti-col::before{background:var(--lime);}
 .footer-col-name{
   font-family:var(--serif);font-size:0.95rem;font-weight:600;
   color:var(--ink);margin-bottom:12px;letter-spacing:0.02em;
@@ -615,17 +654,23 @@ footer{
   .processo-grid{grid-template-columns:1fr 1fr;}
   .processo-step{border-bottom:1px solid var(--rule);border-right:none;}
   .processo-step:nth-child(odd){border-right:1px solid var(--rule);}
-  .pt-socios,.pt-formats,.ac-categories{grid-template-columns:1fr;}
-  .pt-socio,.pt-format,.ac-category{border-right:none;border-bottom:1px solid var(--rule);}
-  .pt-socio:last-child,.pt-format:last-child,.ac-category:last-child{border-bottom:none;}
-  .sobre-layout,.contact-layout,.footer-top,.markets-block,.ac-audience,.ac-signup{grid-template-columns:1fr;gap:32px;}
+  .pt-socios,.pt-formats,.fti-categories{grid-template-columns:1fr;}
+  .pt-socio,.pt-format,.fti-category{border-right:none;border-bottom:1px solid var(--rule);}
+  .pt-socio:last-child,.pt-format:last-child,.fti-category:last-child{border-bottom:none;}
+  .sobre-layout,.contact-layout,.footer-top,.markets-block,.fti-audience,.fti-signup{grid-template-columns:1fr;gap:32px;}
   .markets-chips{grid-template-columns:repeat(2,1fr);}
   .markets-chips.cols-2{grid-template-columns:repeat(2,1fr);}
   .planos-grid{grid-template-columns:1fr;max-width:100%;}
   .section-header-wide{grid-template-columns:1fr;}
   .form-row{grid-template-columns:1fr;}
   footer{padding:48px 24px 28px;}
-  .ac-signup-form{flex-direction:column;}
+  .fti-signup-form{flex-direction:column;}
+  .brand-plate{gap:16px;margin-bottom:24px;}
+  .brand-plate-art{width:76px;height:76px;}
+  .fti-lockup{align-items:flex-start;}
+  .fti-lockup .ft-final,.fti-lockup .ft-third{font-size:1.05rem;letter-spacing:0.2em;}
+  .fti-lockup .ft-rule{width:196px;}
+  .fti-lockup .ft-word{font-size:0.52rem;letter-spacing:0.36em;text-align:left;}
 }
 </style>
 </head>
@@ -653,8 +698,8 @@ footer{
     <button class="brand-tab" data-tab="pt" role="tab" onclick="switchTab('pt')">
       <span class="tab-mark">02</span>Primeiro Toque
     </button>
-    <button class="brand-tab" data-tab="academy" role="tab" onclick="switchTab('academy')">
-      <span class="tab-mark">03</span>Academy
+    <button class="brand-tab" data-tab="institute" role="tab" onclick="switchTab('institute')">
+      <span class="tab-mark">03</span>Institute
     </button>
   </div>
 
@@ -889,6 +934,15 @@ footer{
   <section class="hero">
     <div class="hero-bg hero-bg-pt"></div>
     <div style="position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;">
+      <div class="brand-plate fade-up fade-up-1">
+        <div class="brand-plate-art pt-art">
+          <img src="/pt-cover.png" alt="Primeiro Toque" width="800" height="800" loading="lazy">
+        </div>
+        <div>
+          <div style="font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--ink);line-height:1.15;">Primeiro Toque</div>
+          <div style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--pt-gold);margin-top:6px;">Marca registada · Final Third Analytics</div>
+        </div>
+      </div>
       <div class="hero-label pt-label fade-up fade-up-1">Primeiro Toque · Podcast de futebol</div>
       <h1 class="hero-title fade-up fade-up-2">
         O jogo<br><em class="pt-em">começa aqui.</em>
@@ -969,27 +1023,44 @@ footer{
 <!-- ═══════════════════════════════════════════ END PT TAB ═══════════════════════════════════════════ -->
 
 
-<!-- ═══════════════════════════════════════════ ACADEMY TAB ═══════════════════════════════════════════ -->
-<div class="tab-pane" data-pane="academy">
+<!-- ═══════════════════════════════════════════ INSTITUTE TAB ═══════════════════════════════════════════ -->
+<div class="tab-pane" data-pane="institute">
 
-  <!-- HERO ACADEMY -->
+  <!-- HERO INSTITUTE -->
   <section class="hero">
-    <div class="hero-bg hero-bg-academy"></div>
+    <div class="hero-bg hero-bg-institute"></div>
     <div style="position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;">
-      <div class="hero-label academy-label fade-up fade-up-1">Final Third Academy · Em desenvolvimento</div>
+      <div class="brand-plate fade-up fade-up-1">
+        <div class="brand-plate-art icon-tile fti-art">
+          <img src="/fti-icon.png" alt="Final Third Institute" width="512" height="512" loading="lazy">
+        </div>
+        <div class="fti-lockup">
+          <div class="ft-top">
+            <span class="ft-final">FINAL</span>
+            <span class="ft-third">THIRD</span>
+          </div>
+          <svg class="ft-rule" width="288" height="4" viewBox="0 0 288 4" aria-hidden="true">
+            <rect x="0"   y="1" width="90" height="2" fill="rgba(255,255,255,0.18)" rx="1"/>
+            <rect x="99"  y="1" width="90" height="2" fill="rgba(255,255,255,0.18)" rx="1"/>
+            <rect x="198" y="1" width="90" height="2" fill="#C8F04A" rx="1"/>
+          </svg>
+          <span class="ft-word">Institute</span>
+        </div>
+      </div>
+      <div class="hero-label institute-label fade-up fade-up-1">Final Third Institute · Em desenvolvimento</div>
       <h1 class="hero-title fade-up fade-up-2">
-        A escola online para<br><em class="academy-em">profissionais do desporto.</em>
+        A escola online para<br><em class="institute-em">profissionais do desporto.</em>
       </h1>
       <p class="hero-desc fade-up fade-up-3">
         Formação prática em scouting, análise de dados, análise tática e gestão desportiva. Construída por quem trabalha no terreno, para quem quer evoluir na carreira ou entrar no setor.
       </p>
       <div class="hero-actions fade-up fade-up-4">
-        <a href="#academy-signup" class="btn-primary academy">Quero ser avisado →</a>
-        <a href="#academy-categorias" class="btn-ghost">Ver categorias</a>
+        <a href="#institute-signup" class="btn-primary institute">Quero ser avisado →</a>
+        <a href="#institute-categorias" class="btn-ghost">Ver categorias</a>
       </div>
       <div class="hero-stats fade-up" style="animation-delay:.5s;opacity:0;">
         <div>
-          <div class="hero-stat-val">100<span class="academy-em">%</span></div>
+          <div class="hero-stat-val">100<span class="institute-em">%</span></div>
           <div class="hero-stat-label">Online · ao teu ritmo</div>
         </div>
         <div class="hero-stat-divider"></div>
@@ -1007,70 +1078,70 @@ footer{
   </section>
 
   <!-- SOBRE / CATEGORIAS -->
-  <section class="section" id="academy-categorias">
+  <section class="section" id="institute-categorias">
     <div style="max-width:1200px;margin:0 auto;">
       <div class="section-header-wide">
         <div>
-          <div class="section-label academy-label">O projeto</div>
-          <h2 class="section-title">Formação prática.<br><em class="academy-em">Aplicável já amanhã.</em></h2>
+          <div class="section-label institute-label">O projeto</div>
+          <h2 class="section-title">Formação prática.<br><em class="institute-em">Aplicável já amanhã.</em></h2>
         </div>
         <p class="section-sub">Cursos curtos e profundos, construídos por profissionais activos no scouting, análise e gestão desportiva — não por académicos.</p>
       </div>
 
-      <div class="ac-banner">
-        <div class="ac-banner-dot"></div>
-        <div class="ac-banner-text">Em desenvolvimento · Website próprio em 2026</div>
+      <div class="fti-banner">
+        <div class="fti-banner-dot"></div>
+        <div class="fti-banner-text">Em desenvolvimento · Website próprio em 2026</div>
       </div>
 
-      <div class="ac-body">
-        <p>A <strong>Final Third Academy</strong> é o braço de formação do grupo Final Third. Conteúdos práticos, casos reais, ferramentas profissionais — Wyscout, modelos de dados, frameworks táticos, processos de decisão de mercado. Tudo aquilo que aprendemos a fazer no terreno, estruturado em formato de curso.</p>
+      <div class="fti-body">
+        <p>A <strong>Final Third Institute</strong> é o braço de formação do grupo Final Third. Conteúdos práticos, casos reais, ferramentas profissionais — Wyscout, modelos de dados, frameworks táticos, processos de decisão de mercado. Tudo aquilo que aprendemos a fazer no terreno, estruturado em formato de curso.</p>
         <p>O objetivo: dar a quem trabalha (ou quer trabalhar) no futebol profissional acesso ao tipo de formação que normalmente só existe dentro de clubes ou em consultorias caras.</p>
       </div>
 
-      <div class="section-label academy-label" style="margin-bottom:20px;">Categorias previstas</div>
-      <div class="ac-categories">
-        <div class="ac-category">
-          <div class="ac-cat-num">01 · SCOUTING</div>
-          <h3 class="ac-cat-title">Scouting profissional</h3>
-          <p class="ac-cat-desc">Metodologia de observação, construção de relatórios, filtragem tática, gestão de bases de dados e rede de contactos.</p>
-          <div class="ac-cat-meta">Iniciação · Intermédio · Avançado</div>
+      <div class="section-label institute-label" style="margin-bottom:20px;">Categorias previstas</div>
+      <div class="fti-categories">
+        <div class="fti-category">
+          <div class="fti-cat-num">01 · SCOUTING</div>
+          <h3 class="fti-cat-title">Scouting profissional</h3>
+          <p class="fti-cat-desc">Metodologia de observação, construção de relatórios, filtragem tática, gestão de bases de dados e rede de contactos.</p>
+          <div class="fti-cat-meta">Iniciação · Intermédio · Avançado</div>
         </div>
-        <div class="ac-category">
-          <div class="ac-cat-num">02 · DATA</div>
-          <h3 class="ac-cat-title">Análise de dados no futebol</h3>
-          <p class="ac-cat-desc">Wyscout, métricas avançadas, construção de scoring models, percentis ajustados por liga, leitura crítica de dados.</p>
-          <div class="ac-cat-meta">Intermédio · Avançado</div>
+        <div class="fti-category">
+          <div class="fti-cat-num">02 · DATA</div>
+          <h3 class="fti-cat-title">Análise de dados no futebol</h3>
+          <p class="fti-cat-desc">Wyscout, métricas avançadas, construção de scoring models, percentis ajustados por liga, leitura crítica de dados.</p>
+          <div class="fti-cat-meta">Intermédio · Avançado</div>
         </div>
-        <div class="ac-category">
-          <div class="ac-cat-num">03 · TÁTICA</div>
-          <h3 class="ac-cat-title">Análise tática</h3>
-          <p class="ac-cat-desc">Modelos de jogo, princípios fundamentais, análise de adversário, fit posicional, leitura de fases de jogo.</p>
-          <div class="ac-cat-meta">Iniciação · Intermédio</div>
+        <div class="fti-category">
+          <div class="fti-cat-num">03 · TÁTICA</div>
+          <h3 class="fti-cat-title">Análise tática</h3>
+          <p class="fti-cat-desc">Modelos de jogo, princípios fundamentais, análise de adversário, fit posicional, leitura de fases de jogo.</p>
+          <div class="fti-cat-meta">Iniciação · Intermédio</div>
         </div>
-        <div class="ac-category">
-          <div class="ac-cat-num">04 · GESTÃO</div>
-          <h3 class="ac-cat-title">Gestão desportiva</h3>
-          <p class="ac-cat-desc">Estrutura de departamento desportivo, processos de decisão, gestão de plantel, planeamento de janelas de mercado.</p>
-          <div class="ac-cat-meta">Intermédio · Avançado</div>
+        <div class="fti-category">
+          <div class="fti-cat-num">04 · GESTÃO</div>
+          <h3 class="fti-cat-title">Gestão desportiva</h3>
+          <p class="fti-cat-desc">Estrutura de departamento desportivo, processos de decisão, gestão de plantel, planeamento de janelas de mercado.</p>
+          <div class="fti-cat-meta">Intermédio · Avançado</div>
         </div>
-        <div class="ac-category">
-          <div class="ac-cat-num">05 · CARREIRA</div>
-          <h3 class="ac-cat-title">Carreira no futebol</h3>
-          <p class="ac-cat-desc">Para quem quer entrar no setor — perfis profissionais, percursos formativos, construção de portefólio e rede de contactos.</p>
-          <div class="ac-cat-meta">Iniciação</div>
+        <div class="fti-category">
+          <div class="fti-cat-num">05 · CARREIRA</div>
+          <h3 class="fti-cat-title">Carreira no futebol</h3>
+          <p class="fti-cat-desc">Para quem quer entrar no setor — perfis profissionais, percursos formativos, construção de portefólio e rede de contactos.</p>
+          <div class="fti-cat-meta">Iniciação</div>
         </div>
-        <div class="ac-category">
-          <div class="ac-cat-num">06 · FERRAMENTAS</div>
-          <h3 class="ac-cat-title">Ferramentas práticas</h3>
-          <p class="ac-cat-desc">Workshops curtos sobre Wyscout, InStat, plataformas de tracking, Excel/Sheets aplicado e templates profissionais.</p>
-          <div class="ac-cat-meta">Workshops · 1–4h</div>
+        <div class="fti-category">
+          <div class="fti-cat-num">06 · FERRAMENTAS</div>
+          <h3 class="fti-cat-title">Ferramentas práticas</h3>
+          <p class="fti-cat-desc">Workshops curtos sobre Wyscout, InStat, plataformas de tracking, Excel/Sheets aplicado e templates profissionais.</p>
+          <div class="fti-cat-meta">Workshops · 1–4h</div>
         </div>
       </div>
 
-      <div class="ac-audience">
+      <div class="fti-audience">
         <div>
-          <div class="ac-audience-col-title">Para quem trabalha no setor</div>
-          <ul class="ac-audience-list">
+          <div class="fti-audience-col-title">Para quem trabalha no setor</div>
+          <ul class="fti-audience-list">
             <li>Scouts e observadores em clubes</li>
             <li>Analistas táticos e de dados</li>
             <li>Diretores e coordenadores desportivos</li>
@@ -1078,8 +1149,8 @@ footer{
           </ul>
         </div>
         <div>
-          <div class="ac-audience-col-title">Para quem quer entrar</div>
-          <ul class="ac-audience-list">
+          <div class="fti-audience-col-title">Para quem quer entrar</div>
+          <ul class="fti-audience-list">
             <li>Estudantes de Ciências do Desporto</li>
             <li>Ex-jogadores em transição</li>
             <li>Jornalistas que querem aprofundar</li>
@@ -1088,26 +1159,26 @@ footer{
         </div>
       </div>
 
-      <div class="ac-signup" id="academy-signup">
-        <div class="ac-signup-text">
+      <div class="fti-signup" id="institute-signup">
+        <div class="fti-signup-text">
           <h3>Sê o primeiro a saber do <em>lançamento.</em></h3>
-          <p>Deixa o teu email para receber novidades sobre cursos, datas e acesso antecipado quando a Academy abrir.</p>
+          <p>Deixa o teu email para receber novidades sobre cursos, datas e acesso antecipado quando o Institute abrir.</p>
         </div>
         <div>
-          <form class="ac-signup-form" name="academy-signup" netlify netlify-honeypot="bot-field" method="POST">
-            <input type="hidden" name="form-name" value="academy-signup">
+          <form class="fti-signup-form" name="institute-signup" netlify netlify-honeypot="bot-field" method="POST">
+            <input type="hidden" name="form-name" value="institute-signup">
             <p style="display:none"><input name="bot-field"></p>
             <input type="email" name="email" placeholder="email@dominio.pt" required>
             <button type="submit">Avisar-me →</button>
           </form>
-          <div class="ac-signup-note">Sem spam · Apenas atualizações relevantes</div>
+          <div class="fti-signup-note">Sem spam · Apenas atualizações relevantes</div>
         </div>
       </div>
     </div>
   </section>
 
 </div>
-<!-- ═══════════════════════════════════════════ END ACADEMY TAB ═══════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════ END INSTITUTE TAB ═══════════════════════════════════════════ -->
 
 
 <!-- ═══════════════════════════════════════════ SHARED CONTACT ═══════════════════════════════════════════ -->
@@ -1144,7 +1215,7 @@ footer{
             <select name="sobre" id="contactoSobre" required>
               <option value="Final Third Analytics">Final Third Analytics (Scouting)</option>
               <option value="Primeiro Toque">Primeiro Toque (Conteúdo)</option>
-              <option value="Final Third Academy">Final Third Academy (Formação)</option>
+              <option value="Final Third Institute">Final Third Institute (Formação)</option>
               <option value="Outro">Outro</option>
             </select>
           </div>
@@ -1191,7 +1262,7 @@ footer{
           </svg>
           <span class="ft-analytics">Analytics</span>
         </div>
-        <p class="footer-desc">Análise de dados, conteúdo editorial e formação para o futebol profissional.<br>Porto, Portugal · 2025.</p>
+        <p class="footer-desc">Análise de dados, conteúdo editorial e formação para o futebol profissional.<br>Porto, Portugal · 2025–2026.</p>
       </div>
       <div>
         <div class="footer-col-title fta-col">01 · Analytics</div>
@@ -1214,17 +1285,17 @@ footer{
         </div>
       </div>
       <div>
-        <div class="footer-col-title ac-col">03 · Formação</div>
-        <div class="footer-col-name">Final Third Academy</div>
+        <div class="footer-col-title fti-col">03 · Formação</div>
+        <div class="footer-col-name">Final Third Institute</div>
         <div class="footer-links">
-          <button onclick="switchTab('academy')">Categorias</button>
-          <button onclick="switchTab('academy')">Público-alvo</button>
-          <button onclick="switchTab('academy')">Subscrever novidades</button>
+          <button onclick="switchTab('institute')">Categorias</button>
+          <button onclick="switchTab('institute')">Público-alvo</button>
+          <button onclick="switchTab('institute')">Subscrever novidades</button>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2025 Final Third Analytics · Todos os direitos reservados. Primeiro Toque é marca registada da Final Third Analytics.</span>
+      <span class="footer-copy">© 2026 Final Third Analytics · Todos os direitos reservados. Primeiro Toque é marca registada da Final Third Analytics.</span>
       <div class="footer-legal">
         <a href="#">Política de Privacidade</a>
         <a href="#">Termos de Uso</a>
@@ -1244,7 +1315,7 @@ function switchTab(tab){
   if(sobre){
     if(tab === 'fta') sobre.value = 'Final Third Analytics';
     else if(tab === 'pt') sobre.value = 'Primeiro Toque';
-    else if(tab === 'academy') sobre.value = 'Final Third Academy';
+    else if(tab === 'institute') sobre.value = 'Final Third Institute';
   }
   // Update URL hash without scroll jump
   history.replaceState(null, '', '#' + tab);
@@ -1252,10 +1323,11 @@ function switchTab(tab){
   window.scrollTo({top:0, behavior:'instant'});
 }
 
-// Read initial tab from URL hash
+// Read initial tab from URL hash (legacy #academy → #institute)
 (function(){
-  const h = (location.hash || '').replace('#','').toLowerCase();
-  if(['fta','pt','academy'].includes(h)){
+  let h = (location.hash || '').replace('#','').toLowerCase();
+  if(h === 'academy') h = 'institute';
+  if(['fta','pt','institute'].includes(h)){
     switchTab(h);
   }
 })();
@@ -1278,7 +1350,7 @@ document.querySelectorAll('form[netlify]').forEach(form => {
         successEl.style.display = 'block';
         form.reset();
         if(btn) btn.style.display = 'none';
-      } else if(form.classList.contains('ac-signup-form')){
+      } else if(form.classList.contains('fti-signup-form')){
         form.innerHTML = '<div style="padding:13px 16px;color:var(--lime);font-family:var(--mono);font-size:0.78rem;letter-spacing:0.05em;">✓ Obrigado. Avisamos no lançamento.</div>';
       }
     } catch(err){
