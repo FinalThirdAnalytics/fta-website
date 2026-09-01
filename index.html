@@ -593,10 +593,11 @@ footer{
   padding:60px 48px 32px;
 }
 .footer-top{
-  display:grid;grid-template-columns:280px 1fr 1fr 1fr;
-  gap:48px;padding-bottom:40px;border-bottom:1px solid var(--rule);
+  display:grid;grid-template-columns:1.3fr repeat(5,1fr);
+  gap:36px;padding-bottom:40px;border-bottom:1px solid var(--rule);
   margin-bottom:28px;
 }
+@media(max-width:1100px){.footer-top{grid-template-columns:1fr 1fr;}}
 .footer-brand{display:flex;flex-direction:column;gap:14px;}
 .footer-brand-mark{display:inline-flex;flex-direction:column;align-items:center;gap:0;margin-bottom:10px;}
 .footer-desc{font-size:0.76rem;color:var(--ink-faint);line-height:1.7;font-weight:300;}
@@ -611,6 +612,8 @@ footer{
 .footer-col-title.fta-col::before{background:var(--accent2);}
 .footer-col-title.pt-col::before{background:var(--pt-gold);}
 .footer-col-title.fti-col::before{background:var(--lime);}
+.footer-col-title.ftp-col::before{background:#A855F7;}
+.footer-col-title.ftm-col::before{background:#14B8A6;}
 .footer-col-name{
   font-family:var(--serif);font-size:0.95rem;font-weight:600;
   color:var(--ink);margin-bottom:12px;letter-spacing:0.02em;
@@ -672,6 +675,20 @@ footer{
   .fti-lockup .ft-rule{width:196px;}
   .fti-lockup .ft-word{font-size:0.52rem;letter-spacing:0.36em;text-align:left;}
 }
+
+/* Performance / Manager plates + price cards */
+.ftp-art{border-color:rgba(168,85,247,0.28);}
+.ftm-art{border-color:rgba(20,184,166,0.28);}
+.brand-plate-art img{width:100%;height:100%;object-fit:cover;}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:56px;}
+.price-card{background:var(--navy2,#0d1626);padding:32px 28px;}
+.price-card.hi{box-shadow:inset 0 2px 0 var(--accent);}
+.price-name{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent2);}
+.price-value{font-family:var(--serif);font-size:2.1rem;font-weight:600;color:var(--ink);margin:14px 0 4px;}
+.price-value small{font-family:var(--sans);font-size:0.68rem;font-weight:400;color:var(--ink-mid);margin-left:6px;letter-spacing:0.04em;}
+.price-desc{font-size:0.82rem;color:var(--ink-mid);line-height:1.7;font-weight:300;}
+.price-note{margin-top:14px;font-size:0.72rem;color:var(--ink-dim,rgba(255,255,255,0.4));}
+@media(max-width:860px){.price-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -1193,6 +1210,15 @@ footer{
   <section class="hero">
     <div class="hero-bg"></div>
     <div style="position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;">
+      <div class="brand-plate fade-up fade-up-1">
+        <div class="brand-plate-art ftp-art">
+          <img src="/ftp-icon.png" alt="Final Third Performance" width="512" height="512" loading="lazy">
+        </div>
+        <div>
+          <div style="font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--ink);line-height:1.15;">Final Third Performance</div>
+          <div style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:#c084fc;margin-top:6px;">Análise individual · Final Third Analytics</div>
+        </div>
+      </div>
       <div class="hero-label fade-up fade-up-1">Final Third Performance · para jogadores profissionais</div>
       <h1 class="hero-title fade-up fade-up-2">A tua época,<br><em>jogo a jogo.</em></h1>
       <p class="hero-desc fade-up fade-up-3">
@@ -1233,7 +1259,24 @@ footer{
           <p class="processo-desc">O documento que tu ou o teu agente põem à frente de um diretor desportivo — cada afirmação é um percentil, não um adjetivo.</p>
         </div>
       </div>
-      <p class="section-sub" style="margin-top:48px;">Jogador <strong>€300/mês</strong> · Agência <strong>€2.000/mês</strong> (10 jogadores) · Relatório único <strong>€200</strong> · valores + IVA</p>
+      <div class="price-grid">
+        <div class="price-card">
+          <div class="price-name">Jogador</div>
+          <div class="price-value">€300<small>+ IVA / mês</small></div>
+          <p class="price-desc">Todos os jogos (até 5 por mês), evolução semanal, clips e uma chamada de 30 minutos.</p>
+        </div>
+        <div class="price-card hi">
+          <div class="price-name">Agência</div>
+          <div class="price-value">€2.000<small>+ IVA / mês</small></div>
+          <p class="price-desc">10 jogadores, painel de portefólio, PDF de apresentação por jogador e prioridade de entrega.</p>
+        </div>
+        <div class="price-card">
+          <div class="price-name">Relatório único</div>
+          <div class="price-value">€200<small>+ IVA</small></div>
+          <p class="price-desc">Um jogo, o relatório completo. A porta de entrada.</p>
+        </div>
+      </div>
+      <p class="price-note">Valores acrescidos de IVA à taxa legal em vigor.</p>
     </div>
   </section>
 </div>
@@ -1244,6 +1287,15 @@ footer{
   <section class="hero">
     <div class="hero-bg"></div>
     <div style="position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;">
+      <div class="brand-plate fade-up fade-up-1">
+        <div class="brand-plate-art ftm-art">
+          <img src="/ftm-icon.png" alt="Final Third Manager" width="512" height="512" loading="lazy">
+        </div>
+        <div>
+          <div style="font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--ink);line-height:1.15;">Final Third Manager</div>
+          <div style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:#2dd4bf;margin-top:6px;">Inteligência para treinadores · Final Third Analytics</div>
+        </div>
+      </div>
       <div class="hero-label fade-up fade-up-1">Final Third Manager · inteligência para treinadores</div>
       <h1 class="hero-title fade-up fade-up-2">Trabalhamos para o treinador,<br><em>não para o clube.</em></h1>
       <p class="hero-desc fade-up fade-up-3">
@@ -1265,17 +1317,17 @@ footer{
         <div class="processo-step">
           <div class="processo-num">01</div>
           <h3 class="processo-title">Dossier de Abordagem</h3>
-          <p class="processo-desc">Quem decide no clube, auditoria ao plantel por percentis, fins de contrato, desvio face ao seu modelo e leitura final para a reunião. Em 5 dias úteis. <strong>€1.000</strong>, creditado nos dois primeiros meses se assinar em 90 dias.</p>
+          <p class="processo-desc">Quem decide no clube, auditoria ao plantel por percentis, fins de contrato, desvio face ao seu modelo e leitura final para a reunião. Entregue em 5 dias úteis.</p>
         </div>
         <div class="processo-step">
           <div class="processo-num">02</div>
           <h3 class="processo-title">Acompanhamento mensal</h3>
-          <p class="processo-desc">6 equipas-sombra do catálogo até ao dia 5, análise à sua equipa, 5 jogadores por janela de mercado e uma reunião por mês. <strong>€750/mês</strong>.</p>
+          <p class="processo-desc">6 equipas-sombra do catálogo até ao dia 5, análise à sua equipa, 5 jogadores por janela de mercado e uma reunião por mês.</p>
         </div>
         <div class="processo-step">
           <div class="processo-num">03</div>
           <h3 class="processo-title">Dugout Coach + Perfil</h3>
-          <p class="processo-desc">Licença individual da plataforma — microciclo, preparação de jogo, tarefas — com o módulo Perfil: o plantel e o staff traduzidos em como falar com cada um. <strong>€250/mês</strong>.</p>
+          <p class="processo-desc">Licença individual da plataforma — microciclo, preparação de jogo, tarefas — com o módulo Perfil: o plantel e o staff traduzidos em como falar com cada um.</p>
         </div>
         <div class="processo-step">
           <div class="processo-num">04</div>
@@ -1283,7 +1335,7 @@ footer{
           <p class="processo-desc">12 meses de serviço ativo que seguem o treinador, não o clube. Sai do cargo, suspende sem custo. Assina noutro lado, retoma.</p>
         </div>
       </div>
-      <p class="section-sub" style="margin-top:48px;">Valores acrescidos de IVA à taxa legal em vigor.</p>
+      <p class="section-sub" style="margin-top:48px;">Condições e valores apresentados em reunião, em função da situação do treinador.</p>
     </div>
   </section>
 </div>
@@ -1399,6 +1451,24 @@ footer{
           <button onclick="switchTab('institute')">Categorias</button>
           <button onclick="switchTab('institute')">Público-alvo</button>
           <button onclick="switchTab('institute')">Subscrever novidades</button>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title ftp-col">04 · Jogadores</div>
+        <div class="footer-col-name">Final Third Performance</div>
+        <div class="footer-links">
+          <button onclick="switchTab('performance')">O que recebes</button>
+          <button onclick="switchTab('performance')">Planos</button>
+          <a href="https://performance.finalthirdanalytics.pt" target="_blank" rel="noopener">Entrar na plataforma →</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title ftm-col">05 · Treinadores</div>
+        <div class="footer-col-name">Final Third Manager</div>
+        <div class="footer-links">
+          <button onclick="switchTab('manager')">O serviço</button>
+          <button onclick="switchTab('manager')">Dossier de Abordagem</button>
+          <button onclick="switchTab('manager')">Falar connosco</button>
         </div>
       </div>
     </div>
