@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Final Third · Analytics · Primeiro Toque · Institute · Performance · Manager</title>
-<meta name="description" content="Final Third — análise de dados, conteúdo editorial, formação, análise individual para jogadores e inteligência para treinadores. Porto, Portugal.">
+<title>Final Third · Analytics · Primeiro Toque · Institute · Performance · Manager · Consulting</title>
+<meta name="description" content="Final Third — análise de dados, conteúdo editorial, formação, análise individual para jogadores e inteligência para treinadores e consultoria de gestão para clubes. Porto, Portugal.">
 
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -13,8 +13,8 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Final Third Analytics">
-<meta property="og:title" content="Final Third · Analytics · Primeiro Toque · Institute · Performance · Manager">
-<meta property="og:description" content="Análise de dados, conteúdo editorial, formação, análise individual para jogadores e inteligência para treinadores. Porto, Portugal.">
+<meta property="og:title" content="Final Third · Analytics · Primeiro Toque · Institute · Performance · Manager · Consulting">
+<meta property="og:description" content="Análise de dados, conteúdo editorial, formação, análise individual para jogadores e inteligência para treinadores e consultoria de gestão para clubes. Porto, Portugal.">
 <meta property="og:url" content="https://finalthirdanalytics.pt/">
 <meta property="og:image" content="https://finalthirdanalytics.pt/apple-touch-icon.png">
 <meta name="twitter:card" content="summary">
@@ -593,7 +593,7 @@ footer{
   padding:60px 48px 32px;
 }
 .footer-top{
-  display:grid;grid-template-columns:1.3fr repeat(5,1fr);
+  display:grid;grid-template-columns:1.3fr repeat(6,1fr);
   gap:36px;padding-bottom:40px;border-bottom:1px solid var(--rule);
   margin-bottom:28px;
 }
@@ -614,6 +614,8 @@ footer{
 .footer-col-title.fti-col::before{background:var(--lime);}
 .footer-col-title.ftp-col::before{background:#A855F7;}
 .footer-col-title.ftm-col::before{background:#14B8A6;}
+.footer-col-title.ftc2-col::before{background:#9C243D;}
+.ftc-art{border-color:rgba(156,36,61,0.35);}
 .footer-col-name{
   font-family:var(--serif);font-size:0.95rem;font-weight:600;
   color:var(--ink);margin-bottom:12px;letter-spacing:0.02em;
@@ -723,6 +725,9 @@ footer{
     </button>
     <button class="brand-tab" data-tab="manager" role="tab" onclick="switchTab('manager')">
       <span class="tab-mark">05</span>Manager
+    </button>
+    <button class="brand-tab" data-tab="consulting" role="tab" onclick="switchTab('consulting')">
+      <span class="tab-mark">06</span>Consulting
     </button>
   </div>
 
@@ -1211,12 +1216,20 @@ footer{
     <div class="hero-bg"></div>
     <div style="position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;">
       <div class="brand-plate fade-up fade-up-1">
-        <div class="brand-plate-art ftp-art">
+        <div class="brand-plate-art icon-tile ftp-art">
           <img src="/ftp-icon.png" alt="Final Third Performance" width="512" height="512" loading="lazy">
         </div>
-        <div>
-          <div style="font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--ink);line-height:1.15;">Final Third Performance</div>
-          <div style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:#c084fc;margin-top:6px;">Análise individual · Final Third Analytics</div>
+        <div class="fti-lockup">
+          <div class="ft-top">
+            <span class="ft-final">FINAL</span>
+            <span class="ft-third">THIRD</span>
+          </div>
+          <svg class="ft-rule" width="288" height="4" viewBox="0 0 288 4" aria-hidden="true">
+            <rect x="0"   y="1" width="90" height="2" fill="rgba(255,255,255,0.18)" rx="1"/>
+            <rect x="99"  y="1" width="90" height="2" fill="rgba(255,255,255,0.18)" rx="1"/>
+            <rect x="198" y="1" width="90" height="2" fill="#A855F7" rx="1"/>
+          </svg>
+          <span class="ft-word">Performance</span>
         </div>
       </div>
       <div class="hero-label fade-up fade-up-1">Final Third Performance · para jogadores profissionais</div>
@@ -1288,12 +1301,20 @@ footer{
     <div class="hero-bg"></div>
     <div style="position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;">
       <div class="brand-plate fade-up fade-up-1">
-        <div class="brand-plate-art ftm-art">
+        <div class="brand-plate-art icon-tile ftm-art">
           <img src="/ftm-icon.png" alt="Final Third Manager" width="512" height="512" loading="lazy">
         </div>
-        <div>
-          <div style="font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--ink);line-height:1.15;">Final Third Manager</div>
-          <div style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:#2dd4bf;margin-top:6px;">Inteligência para treinadores · Final Third Analytics</div>
+        <div class="fti-lockup">
+          <div class="ft-top">
+            <span class="ft-final">FINAL</span>
+            <span class="ft-third">THIRD</span>
+          </div>
+          <svg class="ft-rule" width="288" height="4" viewBox="0 0 288 4" aria-hidden="true">
+            <rect x="0"   y="1" width="90" height="2" fill="rgba(255,255,255,0.18)" rx="1"/>
+            <rect x="99"  y="1" width="90" height="2" fill="rgba(255,255,255,0.18)" rx="1"/>
+            <rect x="198" y="1" width="90" height="2" fill="#14B8A6" rx="1"/>
+          </svg>
+          <span class="ft-word">Manager</span>
         </div>
       </div>
       <div class="hero-label fade-up fade-up-1">Final Third Manager · inteligência para treinadores</div>
@@ -1340,6 +1361,84 @@ footer{
   </section>
 </div>
 <!-- ═══════════════════════════════════════════ END MANAGER TAB ═══════════════════════════════════════════ -->
+
+
+<!-- ═══════════════════════════════════════════ CONSULTING TAB ═══════════════════════════════════════════ -->
+<div class="tab-pane" data-pane="consulting" style="--accent:#9C243D;--accent2:#c2405e;--accent-glow:rgba(156,36,61,0.18);">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div style="position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;">
+      <div class="brand-plate fade-up fade-up-1">
+        <div class="brand-plate-art icon-tile ftc-art">
+          <img src="/ftc-icon.png" alt="Final Third Consulting" width="512" height="512" loading="lazy">
+        </div>
+        <div class="fti-lockup">
+          <div class="ft-top">
+            <span class="ft-final">FINAL</span>
+            <span class="ft-third">THIRD</span>
+          </div>
+          <svg class="ft-rule" width="288" height="4" viewBox="0 0 288 4" aria-hidden="true">
+            <rect x="0"   y="1" width="90" height="2" fill="rgba(255,255,255,0.18)" rx="1"/>
+            <rect x="99"  y="1" width="90" height="2" fill="rgba(255,255,255,0.18)" rx="1"/>
+            <rect x="198" y="1" width="90" height="2" fill="#9C243D" rx="1"/>
+          </svg>
+          <span class="ft-word">Consulting</span>
+        </div>
+      </div>
+      <div class="hero-label fade-up fade-up-1">Final Third Consulting · para direções e SADs</div>
+      <h1 class="hero-title fade-up fade-up-2">O clube inteiro,<br><em>não só o plantel.</em></h1>
+      <p class="hero-desc fade-up fade-up-3">
+        Um ecossistema de gestão de clubes: organização, finanças, futebol, mercado e operação — com o rigor de quem já esteve do lado de dentro. Do diagnóstico à execução, ao lado de quem decide.
+      </p>
+      <div class="hero-actions fade-up fade-up-4">
+        <a href="#contacto" class="btn-primary">Falar connosco →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-header">
+        <div class="section-label">O que fazemos</div>
+        <h2 class="section-title">Um ecossistema de<br><em>gestão de clubes.</em></h2>
+      </div>
+      <div class="processo-grid">
+        <div class="processo-step">
+          <div class="processo-num">01</div>
+          <h3 class="processo-title">Diagnóstico do clube</h3>
+          <p class="processo-desc">Organização, situação financeira e estrutura desportiva lidas em conjunto — com dados reais do clube, não impressões. Termina num plano com prioridades e responsáveis.</p>
+        </div>
+        <div class="processo-step">
+          <div class="processo-num">02</div>
+          <h3 class="processo-title">Estrutura e controlo financeiro</h3>
+          <p class="processo-desc">Organograma e funções, processos de decisão, mapa de controlo financeiro, orçamento desportivo e planeamento de época. A base para decidir sem surpresas.</p>
+        </div>
+        <div class="processo-step">
+          <div class="processo-num">03</div>
+          <h3 class="processo-title">Scouting e decisões desportivas</h3>
+          <p class="processo-desc">Recrutamento com o motor da Final Third Analytics, planeamento de plantel, janelas de mercado e apoio à decisão — contratações, renovações e escolha de treinador com dados e critério.</p>
+        </div>
+        <div class="processo-step">
+          <div class="processo-num">04</div>
+          <h3 class="processo-title">Procurement em Portugal</h3>
+          <p class="processo-desc">Para clubes estrangeiros que compram no mercado português: identificação, due diligence, avaliação de custo real e execução — do primeiro contacto ao contrato, sem conflito de interesses.</p>
+        </div>
+        <div class="processo-step">
+          <div class="processo-num">05</div>
+          <h3 class="processo-title">Operação e adeptos</h3>
+          <p class="processo-desc">Dia de jogo, bilhética, sócios e eventos — a operação que transforma o clube num sítio onde as pessoas querem estar, com receitas a acompanhar.</p>
+        </div>
+        <div class="processo-step">
+          <div class="processo-num">06</div>
+          <h3 class="processo-title">Comercial, parcerias e comunicação</h3>
+          <p class="processo-desc">Carteira de parceiros, ativação de patrocínios e comunicação do clube — do conteúdo ao protocolo com a autarquia.</p>
+        </div>
+      </div>
+      <p class="section-sub" style="margin-top:48px;">Âmbito e valores definidos caso a caso, em função da dimensão e do momento do clube.</p>
+    </div>
+  </section>
+</div>
+<!-- ═══════════════════════════════════════════ END CONSULTING TAB ═══════════════════════════════════════════ -->
 
 <!-- ═══════════════════════════════════════════ SHARED CONTACT ═══════════════════════════════════════════ -->
 <section class="section section-alt" id="contacto">
@@ -1462,13 +1561,22 @@ footer{
           <a href="https://performance.finalthirdanalytics.pt" target="_blank" rel="noopener">Entrar na plataforma →</a>
         </div>
       </div>
-      <div>
+            <div>
         <div class="footer-col-title ftm-col">05 · Treinadores</div>
         <div class="footer-col-name">Final Third Manager</div>
         <div class="footer-links">
           <button onclick="switchTab('manager')">O serviço</button>
           <button onclick="switchTab('manager')">Dossier de Abordagem</button>
           <button onclick="switchTab('manager')">Falar connosco</button>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title ftc2-col">06 · Clubes</div>
+        <div class="footer-col-name">Final Third Consulting</div>
+        <div class="footer-links">
+          <button onclick="switchTab('consulting')">O que fazemos</button>
+          <button onclick="switchTab('consulting')">Diagnóstico</button>
+          <button onclick="switchTab('consulting')">Falar connosco</button>
         </div>
       </div>
     </div>
@@ -1496,6 +1604,7 @@ function switchTab(tab){
     else if(tab === 'institute') sobre.value = 'Final Third Institute';
     else if(tab === 'performance') sobre.value = 'Final Third Performance';
     else if(tab === 'manager') sobre.value = 'Final Third Manager';
+    else if(tab === 'consulting') sobre.value = 'Final Third Consulting';
   }
   // Update URL hash without scroll jump
   history.replaceState(null, '', '#' + tab);
