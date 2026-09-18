@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Final Third · Analytics · Primeiro Toque · Institute · Performance · Manager · Consulting</title>
+<title>Final Third Analytics · Scouting, Dados e Consultoria de Futebol</title>
 <meta name="description" content="Final Third — análise de dados, conteúdo editorial, formação, análise individual para jogadores e inteligência para treinadores e consultoria de gestão para clubes. Porto, Portugal.">
 
 <link rel="icon" type="image/png" href="/favicon.png">
@@ -13,7 +13,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Final Third Analytics">
-<meta property="og:title" content="Final Third · Analytics · Primeiro Toque · Institute · Performance · Manager · Consulting">
+<meta property="og:title" content="Final Third Analytics · Scouting, Dados e Consultoria de Futebol">
 <meta property="og:description" content="Análise de dados, conteúdo editorial, formação, análise individual para jogadores e inteligência para treinadores e consultoria de gestão para clubes. Porto, Portugal.">
 <meta property="og:url" content="https://finalthirdanalytics.pt/">
 <meta property="og:image" content="https://finalthirdanalytics.pt/apple-touch-icon.png">
@@ -254,6 +254,7 @@ nav{
   display:grid;grid-template-columns:repeat(4,1fr);gap:0;
   border:1px solid var(--rule);border-radius:2px;overflow:hidden;
 }
+.processo-grid-3{grid-template-columns:repeat(3,1fr);}
 .processo-step{
   padding:36px 28px;border-right:1px solid var(--rule);
   position:relative;
@@ -435,6 +436,7 @@ nav{
 .brand-plate-art.icon-tile img{width:82%;height:82%;object-fit:contain;}
 .brand-plate-art.pt-art{border-color:rgba(201,176,107,0.28);}
 .brand-plate-art.fti-art{border-color:rgba(200,240,74,0.24);}
+.brand-plate-art.fta-art{border-color:rgba(29,78,216,0.30);}
 
 /* FTI wordmark lockup — dark-background rebuild of the primary logo */
 .fti-lockup{display:inline-flex;flex-direction:column;align-items:center;gap:0;}
@@ -751,6 +753,23 @@ footer{
       <rect x="28" y="90" width="24" height="5" rx="0.5" stroke="white" stroke-width="0.3" fill="none"/>
     </svg>
     <div style="position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;">
+      <div class="brand-plate fade-up fade-up-1">
+        <div class="brand-plate-art icon-tile fta-art">
+          <img src="/fta-icon.png" alt="Final Third Analytics" width="512" height="512" loading="lazy">
+        </div>
+        <div class="fti-lockup">
+          <div class="ft-top">
+            <span class="ft-final">FINAL</span>
+            <span class="ft-third">THIRD</span>
+          </div>
+          <svg class="ft-rule" width="288" height="4" viewBox="0 0 288 4" aria-hidden="true">
+            <rect x="0"   y="1" width="90" height="2" fill="rgba(255,255,255,0.18)" rx="1"/>
+            <rect x="99"  y="1" width="90" height="2" fill="rgba(255,255,255,0.18)" rx="1"/>
+            <rect x="198" y="1" width="90" height="2" fill="#1d4ed8" rx="1"/>
+          </svg>
+          <span class="ft-word">Analytics</span>
+        </div>
+      </div>
       <div class="hero-label fade-up fade-up-1">Final Third Analytics · Porto, Portugal</div>
       <h1 class="hero-title fade-up fade-up-2">
         O departamento de recrutamento<br>que o teu clube <em>ainda não tem.</em>
@@ -1334,7 +1353,7 @@ footer{
         <div class="section-label">O serviço</div>
         <h2 class="section-title">Do dossier de abordagem<br>ao <em>dia a dia do cargo.</em></h2>
       </div>
-      <div class="processo-grid">
+      <div class="processo-grid processo-grid-3">
         <div class="processo-step">
           <div class="processo-num">01</div>
           <h3 class="processo-title">Dossier de Abordagem</h3>
@@ -1347,11 +1366,6 @@ footer{
         </div>
         <div class="processo-step">
           <div class="processo-num">03</div>
-          <h3 class="processo-title">Dugout Coach + Perfil</h3>
-          <p class="processo-desc">Licença individual da plataforma — microciclo, preparação de jogo, tarefas — com o módulo Perfil: o plantel e o staff traduzidos em como falar com cada um.</p>
-        </div>
-        <div class="processo-step">
-          <div class="processo-num">04</div>
           <h3 class="processo-title">Segue a pessoa</h3>
           <p class="processo-desc">12 meses de serviço ativo que seguem o treinador, não o clube. Sai do cargo, suspende sem custo. Assina noutro lado, retoma.</p>
         </div>
