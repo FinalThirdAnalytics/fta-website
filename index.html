@@ -536,6 +536,8 @@ nav{
 .fti-signup-note{
   margin-top:12px;font-size:0.7rem;color:var(--ink-faint);font-weight:300;
 }
+.fti-signup-note a,.form-privacy a{color:var(--ink-mid);text-decoration:underline;text-underline-offset:2px;}
+.fti-signup-note a:hover,.form-privacy a:hover{color:var(--ink);}
 
 /* ── CONTACT ── */
 .contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
@@ -583,6 +585,8 @@ nav{
   border-radius:2px;transition:background .2s;
 }
 .form-submit:hover{background:#1e40af;}
+.form-privacy{font-size:0.7rem;color:var(--ink-faint);font-weight:300;line-height:1.6;}
+.form-error{display:none;font-size:0.78rem;color:#f87171;}
 .form-success{
   display:none;padding:20px;border:1px solid rgba(34,197,94,0.3);
   background:rgba(34,197,94,0.06);border-radius:2px;text-align:center;
@@ -1218,7 +1222,7 @@ footer{
             <input type="email" name="email" placeholder="email@dominio.pt" required>
             <button type="submit">Avisar-me →</button>
           </form>
-          <div class="fti-signup-note">Sem spam · Apenas atualizações relevantes</div>
+          <div class="fti-signup-note">Ao subscrever, aceitas receber emails do Final Third Institute. Sem spam, e podes cancelar a qualquer momento. <a href="/privacidade.html">Política de Privacidade</a></div>
         </div>
       </div>
     </div>
@@ -1473,8 +1477,8 @@ footer{
           <div class="contact-item">
             <div class="contact-item-icon">📍</div>
             <div>
-              <div class="contact-item-label">Localização</div>
-              <div class="contact-item-val">Porto, Portugal</div>
+              <div class="contact-item-label">Sede</div>
+              <div class="contact-item-val">Rua Luísa Neto Jorge, n.º 215, R/C Loja Cj<br>4450-570 Matosinhos, Portugal</div>
             </div>
           </div>
         </div>
@@ -1511,6 +1515,8 @@ footer{
             <textarea name="mensagem" rows="5" placeholder="Conta-nos o contexto — o que procuras, o que queres explorar..."></textarea>
           </div>
           <button type="submit" class="form-submit">Enviar mensagem →</button>
+          <p class="form-privacy">Usamos estes dados apenas para responder ao teu pedido. Sabe mais na <a href="/privacidade.html">Política de Privacidade</a>.</p>
+          <div class="form-error" id="formError">Não foi possível enviar. Tenta novamente ou escreve para geral&#64;finalthirdanalytics.pt.</div>
           <div class="form-success" id="formSuccess">Mensagem enviada. Respondemos em 24h.</div>
         </form>
       </div>
@@ -1595,16 +1601,16 @@ footer{
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2026 Final Third Analytics · Todos os direitos reservados. Primeiro Toque é marca registada da Final Third Analytics.</span>
+      <span class="footer-copy">© 2026 Final Third Analytics, Lda. · NIPC 519 302 583 · Rua Luísa Neto Jorge, n.º 215, R/C Loja Cj, 4450-570 Matosinhos, Portugal · Todos os direitos reservados. Primeiro Toque é marca registada da Final Third Analytics.</span>
       <div class="footer-legal">
-        <a href="#">Política de Privacidade</a>
-        <a href="#">Termos de Uso</a>
+        <a href="/privacidade.html">Política de Privacidade</a>
+        <a href="/termos.html">Termos de Utilização</a>
+        <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener">Livro de Reclamações</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
 // ── TAB SWITCHING ──
 function switchTab(tab){
@@ -1643,11 +1649,14 @@ document.querySelectorAll('form[netlify]').forEach(form => {
     const originalText = btn ? btn.textContent : '';
     if(btn){ btn.textContent = 'A enviar...'; btn.disabled = true; }
     try {
-      await fetch('/', {
+      const res = await fetch('/', {
         method:'POST',
         headers:{'Content-Type':'application/x-www-form-urlencoded'},
         body: new URLSearchParams(new FormData(form)).toString()
       });
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      const errEl = form.querySelector('.form-error');
+      if(errEl) errEl.style.display = 'none';
       const successEl = form.querySelector('.form-success') || document.getElementById('formSuccess');
       if(successEl && form.classList.contains('contact-form')){
         successEl.style.display = 'block';
@@ -1658,6 +1667,9 @@ document.querySelectorAll('form[netlify]').forEach(form => {
       }
     } catch(err){
       if(btn){ btn.textContent = originalText; btn.disabled = false; }
+      const errEl = form.querySelector('.form-error');
+      if(errEl){ errEl.style.display = 'block'; }
+      else if(form.classList.contains('fti-signup-form') && btn){ btn.textContent = 'Erro — tenta de novo'; }
     }
   });
 });
