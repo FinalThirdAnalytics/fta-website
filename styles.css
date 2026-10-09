@@ -1,0 +1,152 @@
+/* Final Third Analytics — site geral */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#ffffff;
+  --wash:#f3f5f8;
+  --ink:#16202e;
+  --ink-2:#4a5565;
+  --ink-3:#737d8c;
+  --line:#dde2e9;
+  --grey-bar:#b6bdc8;
+  --accent:#1d4ed8;
+  --accent-ink:#1d4ed8;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+body.p-jogadores{--accent:#a855f7;--accent-ink:#7e22ce}
+body.p-treinadores{--accent:#14b8a6;--accent-ink:#0f766e}
+body.p-consultoria{--accent:#9c243d;--accent-ink:#9c243d}
+
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* Cabeçalho */
+.top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0 20px}
+.logo{display:inline-block;text-decoration:none;line-height:1}
+.logo-words{display:flex;gap:10px;font-family:var(--serif);font-size:1.3rem;letter-spacing:.2em;white-space:nowrap}
+.logo-final{color:#a3abb7;font-weight:500}
+.logo-third{color:#1e293b;font-weight:700}
+.logo-bars{display:flex;gap:4px;margin-top:6px;margin-right:.2em}
+.logo-bars i{flex:1;height:3px;background:var(--grey-bar)}
+.logo-bars i:last-child{background:var(--accent)}
+.logo-sub{display:block;margin-top:6px;margin-right:.2em;text-align:center;font-size:.56rem;font-weight:500;letter-spacing:.42em;text-indent:.42em;text-transform:uppercase;color:#5b6676}
+.nav{display:flex;align-items:center;gap:26px;font-size:.9rem;font-weight:500}
+.nav a{text-decoration:none;color:var(--ink-2);padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--ink)}
+.nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+.thirds{display:flex;height:4px}
+.thirds i{flex:1;background:var(--line)}
+.thirds i:last-child{background:var(--accent)}
+
+/* Texto */
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;color:var(--ink)}
+h1{font-size:clamp(2.3rem,5.4vw,3.9rem);letter-spacing:-.01em;max-width:17ch}
+h2{font-size:clamp(1.7rem,3.2vw,2.3rem);margin-bottom:18px}
+h3{font-size:1.4rem;margin-bottom:6px}
+p{max-width:66ch}
+.lead{font-size:1.1rem;color:var(--ink-2);margin-top:22px;max-width:60ch}
+.hero{padding:72px 0 56px}
+.sec{padding:56px 0;border-top:1px solid var(--line)}
+.sec.wash{background:var(--wash);border-top:0}
+.sec p+p{margin-top:14px}
+.muted{color:var(--ink-2)}
+.small{font-size:.86rem;color:var(--ink-3)}
+
+/* Botões */
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:13px 22px;border-radius:3px;font:600 .92rem var(--sans);text-decoration:none;cursor:pointer;border:1.5px solid var(--ink);background:var(--ink);color:#fff}
+.btn:hover{background:#000}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--wash)}
+.btn.wa{background:#128c4a;border-color:#128c4a}
+.btn.wa:hover{background:#0e733c}
+
+/* Página inicial: as quatro portas */
+.doors{border-top:1px solid var(--ink)}
+.door{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr) 68px;align-items:center;gap:28px;padding:30px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.door-name{font-family:var(--serif);font-weight:600;font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.05}
+.door-desc{color:var(--ink-2);font-size:.98rem}
+.door-bars{display:flex;gap:3px}
+.door-bars i{flex:1;height:4px;background:var(--line)}
+.door-bars i:last-child{background:var(--d)}
+.door:hover .door-name{color:var(--dk)}
+.door:hover .door-bars i{background:var(--d)}
+
+/* Listas de factos */
+.rows{list-style:none;border-top:1px solid var(--line);margin-top:8px}
+.rows li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:28px;padding:20px 0;border-bottom:1px solid var(--line)}
+.rows strong{font-family:var(--serif);font-size:1.3rem;font-weight:600;line-height:1.2}
+.rows span{color:var(--ink-2)}
+.steps{list-style:none;counter-reset:s;margin-top:8px}
+.steps li{counter-increment:s;position:relative;padding:0 0 22px 52px;max-width:66ch}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-6px;font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--accent-ink)}
+.steps b{font-weight:600}
+.rule{border-left:4px solid var(--accent);padding:4px 0 4px 22px;margin-top:8px}
+.rule p{font-size:1.02rem}
+
+/* Preços */
+.prices{width:100%;border-collapse:collapse;margin-top:8px}
+.prices th,.prices td{text-align:left;vertical-align:top;padding:18px 0;border-bottom:1px solid var(--line)}
+.prices tr:first-child>*{border-top:1px solid var(--line)}
+.prices th{font-family:var(--serif);font-size:1.3rem;font-weight:600;width:24%;padding-right:20px}
+.prices td.what{color:var(--ink-2);padding-right:20px}
+.prices td.cost{white-space:nowrap;text-align:right;font-weight:600;width:1%}
+.prices td.cost small{display:block;font-weight:400;color:var(--ink-3);font-size:.8rem}
+
+/* Prova */
+.proof{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:start}
+.proof-fig{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,6vw,4.2rem);line-height:1;color:var(--ink)}
+.proof-fig small{display:block;font-family:var(--sans);font-weight:400;font-size:.92rem;line-height:1.5;color:var(--ink-2);margin-top:12px;max-width:30ch}
+
+/* Faixas de saída */
+.out{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 28px;padding:22px 0;border-bottom:1px solid var(--line)}
+.out:first-of-type{border-top:1px solid var(--line)}
+.out b{font-family:var(--serif);font-size:1.3rem;font-weight:600}
+.out span{color:var(--ink-2);flex:1 1 320px}
+.out a{font-weight:600;white-space:nowrap}
+
+/* Contacto */
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px}
+.contact dl{margin-top:26px;font-size:.95rem}
+.contact dt{color:var(--ink-3);font-size:.82rem;margin-top:14px}
+form.f{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form.f label{display:block;font-size:.84rem;font-weight:500;color:var(--ink-2)}
+form.f .full{grid-column:1/-1}
+form.f input,form.f textarea{display:block;width:100%;margin-top:6px;padding:12px 13px;border:1px solid #b9c1cc;border-radius:3px;background:#fff;color:var(--ink);font:400 1rem var(--sans)}
+form.f textarea{min-height:120px;resize:vertical}
+form.f .msg{display:none;grid-column:1/-1;padding:13px 15px;border-radius:3px;font-size:.92rem}
+form.f .ok{background:#e8f5ec;color:#14532d}
+form.f .err{background:#fdecec;color:#7f1d1d}
+.hp{position:absolute;left:-9999px}
+
+/* Rodapé */
+footer{background:var(--wash);margin-top:0;padding:40px 0 48px;font-size:.84rem;color:var(--ink-2)}
+.foot-nav{display:flex;flex-wrap:wrap;gap:8px 24px;margin-bottom:18px;font-weight:500}
+.foot-nav a{text-decoration:none}
+.foot-nav a:hover,.foot-legal a:hover{text-decoration:underline}
+.foot-legal{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:14px}
+footer p{max-width:none}
+
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .top{flex-direction:column;align-items:flex-start;gap:16px;padding:18px 0 12px}
+  .nav{width:100%;justify-content:space-between;gap:8px;font-size:.82rem}
+  .hero{padding:44px 0 40px}
+  .sec{padding:42px 0}
+  .door{grid-template-columns:1fr 44px;gap:6px 16px;padding:22px 0}
+  .door-desc{grid-column:1/-1;grid-row:2}
+  .rows li,.proof,.contact{grid-template-columns:1fr;gap:6px}
+  .proof,.contact{gap:28px}
+  form.f{grid-template-columns:1fr}
+  .prices,.prices tbody,.prices tr,.prices th,.prices td{display:block;width:auto}
+  .prices tr{padding:16px 0;border-bottom:1px solid var(--line)}
+  .prices tr:first-child{border-top:1px solid var(--line)}
+  .prices th,.prices td,.prices tr:first-child>*{border:0;padding:0}
+  .prices td.cost{text-align:left;margin-top:8px}
+  .prices td.cost small{display:inline;margin-left:6px}
+  .btn{width:100%;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
