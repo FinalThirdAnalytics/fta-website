@@ -1,6 +1,6 @@
 // Ligações antigas (#fta, #performance, ...) do site de separadores
 (function () {
-  var old = { fta: '/clubes', performance: '/jogadores', manager: '/treinadores', consulting: '/consultoria', pt: '/primeiro-toque', institute: '/#institute', academy: '/#institute' };
+  var old = { fta: '/clubes', performance: '/jogadores', manager: '/treinadores', consulting: '/consultoria', pt: '/primeiro-toque', institute: '/institute', academy: '/institute' };
   var h = (location.hash || '').slice(1).toLowerCase();
   var home = location.pathname === '/' || /index\.html$/.test(location.pathname);
   if (home && old[h] && old[h].charAt(1) !== '#') location.replace(old[h]);
